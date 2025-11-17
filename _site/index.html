@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ lang: localStorage.getItem('lang') || 'en' }" x-init="document.documentElement.setAttribute('lang', lang)">
+
+<head>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lisoing Sem - Index</title>
+
+
+
+<meta name="twitter:title" content="Lisoing Sem - Index">
+<meta property="og:title" content="Lisoing Sem - Index">
+
+
+<meta name="generator" content="HydePHP v2.0.1">
+<meta property="og:site_name" content="HydePHP">
+
+
+
+
+<style>[x-cloak] {display: none!important}</style>
+
+
+            <link rel="stylesheet" href="media/app.css?v=6c2c221f">
+    
+
+    
+    
+
+
+    
+    <meta id="meta-color-scheme" name="color-scheme" content="light">
+    <script>if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) { document.documentElement.classList.add('dark'); document.getElementById('meta-color-scheme').setAttribute('content', 'dark');} else { document.documentElement.classList.remove('dark') } </script>
+
+
+
+
+
+
+    </head>
+
+<body id="app"
+    class="flex flex-col min-h-screen overflow-x-hidden dark:bg-gray-900 dark:text-white page-transition"
+    x-data="{ navigationOpen: false, pageLoading: false }" x-on:keydown.escape="navigationOpen = false">
+
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="fixed top-0 left-0 w-full h-1 bg-transparent z-[100] pointer-events-none"
+        style="display: none;">
+        <div id="progress-bar-fill" class="h-full bg-indigo-600 transition-all duration-300 ease-out"
+            style="width: 0%;"></div>
+    </div>
+
+    <a href="#content" id="skip-to-content" class="sr-only focus:not-sr-only bg-black border-4 border-yellow-400 focus:absolute focus:mt-2 focus:mx-auto focus:p-2 focus:w-64 h-auto left-0 overflow-auto right-0 rounded-md text-center text-lg text-white top-auto z-50 ">Skip to content</a>    <nav aria-label="Main navigation"
+    class="flex flex-wrap items-center justify-between p-4 shadow-lg sm:shadow-xl md:shadow-none dark:bg-gray-800 sticky top-0 z-50 bg-white backdrop-blur-sm bg-white/95 dark:bg-gray-800/95"
+    x-data="{ navigationOpen: false, lang: localStorage.getItem('lang') || 'en' }" x-init="lang = localStorage.getItem('lang') || 'en'">
+    <div class="flex grow items-center shrink-0 text-gray-900 dark:text-gray-100">
+        <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity duration-200">
+                            <img src="/media/profile.jpg" alt="Lisoing Sem - Full Stack Developer"
+                    class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-indigo-600 dark:border-indigo-400 shadow-sm">
+                        <span
+                class="text-xl md:text-2xl font-bold tracking-tight hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">
+                Lisoing Sem
+            </span>
+        </a>
+
+        <div class="ml-auto flex items-center gap-2">
+            <button @click="toggleTheme" 
+        class="flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        title="Toggle theme"
+        aria-label="Toggle dark theme">
+    <!-- Sun Icon (Light Mode) -->
+    <svg class="w-5 h-5 block dark:hidden transition-all duration-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+    </svg>
+    <!-- Moon Icon (Dark Mode) -->
+    <svg class="w-5 h-5 hidden dark:block transition-all duration-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+    </svg>
+</button>
+
+            <div class="relative" x-data="{ open: false, lang: localStorage.getItem('lang') || 'en' }" x-init="lang = localStorage.getItem('lang') || 'en'">
+    <button @click="open = !open"
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        :title="lang === 'en' ? 'Switch to Khmer' : 'Switch to English'" aria-label="Change language">
+        <span class="font-semibold uppercase tracking-wide" x-text="lang === 'en' ? 'EN' : 'KM'"></span>
+        <svg class="w-3.5 h-3.5 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+    </button>
+
+    <div x-show="open" x-transition:enter="transition ease-out duration-150"
+        x-transition:enter-start="opacity-0 scale-95 translate-y-1"
+        x-transition:enter-end="opacity-100 scale-100 translate-y-0"
+        x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-95" @click.away="open = false"
+        class="absolute right-0 mt-2 w-36 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-1.5 z-50 overflow-hidden backdrop-blur-sm">
+
+        <button @click="if (window.switchLanguage) { window.switchLanguage('en'); lang = 'en'; } open = false"
+            :class="lang === 'en' ? 'bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400' :
+                'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'"
+            class="w-full flex items-center justify-between px-4 py-2 text-sm font-medium transition-colors duration-150">
+            <div class="flex items-center gap-2">
+                <span class="font-semibold uppercase tracking-wide text-xs">EN</span>
+                <span>English</span>
+            </div>
+            <svg x-show="lang === 'en'" class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+            </svg>
+        </button>
+
+        <button @click="if (window.switchLanguage) { window.switchLanguage('km'); lang = 'km'; } open = false"
+            :class="lang === 'km' ? 'bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400' :
+                'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'"
+            class="w-full flex items-center justify-between px-4 py-2 text-sm font-medium transition-colors duration-150">
+            <div class="flex items-center gap-2">
+                <span class="font-semibold uppercase tracking-wide text-xs">KM</span>
+                <span>ភាសាខ្មែរ</span>
+            </div>
+            <svg x-show="lang === 'km'" class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+            </svg>
+        </button>
+    </div>
+</div>
+        </div>
+    </div>
+
+    <div class="block md:hidden">
+        <button
+            class="flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            aria-label="Toggle navigation menu" aria-expanded="false" :aria-expanded="navigationOpen"
+            @click="navigationOpen = ! navigationOpen">
+            <svg x-show="! navigationOpen" title="Open Navigation Menu" class="dark:fill-gray-200 w-6 h-6"
+                style="display: block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg x-show="navigationOpen" title="Close Navigation Menu" class="dark:fill-gray-200 w-6 h-6"
+                style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </div>
+
+    <div class="w-full hidden md:flex grow md:grow-0 md:items-center md:w-auto px-6 -mx-4 border-t mt-3 pt-3 md:border-none md:mt-0 md:py-0 border-gray-200 dark:border-gray-700"
+        :class="navigationOpen ? 'block!' : ''">
+        <ul aria-label="Navigation links" class="md:grow md:flex justify-end gap-2">
+            <li>
+                <a href="/"
+                    class="nav-link px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400"
+                    data-translate="nav.home" data-page="index">Home</a>
+            </li>
+            <li>
+                <a href="/about"
+                    class="nav-link px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400"
+                    data-translate="nav.about" data-page="about">About</a>
+            </li>
+            <li>
+                <a href="/portfolio"
+                    class="nav-link px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400"
+                    data-translate="nav.portfolio"
+                    data-page="portfolio">Portfolio</a>
+            </li>
+            <li>
+                <a href="/contact"
+                    class="nav-link px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400"
+                    data-translate="nav.contact" data-page="contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div x-show="navigationOpen" x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 transform -translate-y-2"
+        x-transition:enter-end="opacity-100 transform translate-y-0"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 transform translate-y-0"
+        x-transition:leave-end="opacity-0 transform -translate-y-2"
+        class="w-full md:hidden border-t border-gray-200 dark:border-gray-700">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="/"
+                class="nav-link block px-3 py-2 text-base font-medium rounded-lg transition-all duration-200 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400"
+                data-translate="nav.home" data-page="index"
+                @click="navigationOpen = false">Home</a>
+            <a href="/about"
+                class="nav-link block px-3 py-2 text-base font-medium rounded-lg transition-all duration-200 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400"
+                data-translate="nav.about" data-page="about"
+                @click="navigationOpen = false">About</a>
+            <a href="/portfolio"
+                class="nav-link block px-3 py-2 text-base font-medium rounded-lg transition-all duration-200 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400"
+                data-translate="nav.portfolio" data-page="portfolio"
+                @click="navigationOpen = false">Portfolio</a>
+            <a href="/contact"
+                class="nav-link block px-3 py-2 text-base font-medium rounded-lg transition-all duration-200 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400"
+                data-translate="nav.contact" data-page="contact"
+                @click="navigationOpen = false">Contact</a>
+        </div>
+    </div>
+</nav>
+
+    <main id="main-content" class="flex-grow">
+            <section  class="bg-white dark:bg-gray-900  hero-gradient text-white relative overflow-hidden h-screen flex items-center">
+    <div class="absolute inset-0 bg-black/10"></div>
+
+    
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-white rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-300 rounded-full blur-3xl animate-float-slow"
+            style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-purple-300 rounded-full blur-3xl animate-float-medium"
+            style="animation-delay: 2s; transform: translate(-50%, -50%);"></div>
+        <div class="absolute top-3/4 left-1/6 w-80 h-80 bg-blue-300 rounded-full blur-3xl animate-float-fast"
+            style="animation-delay: 0.5s;"></div>
+    </div>
+
+    
+    <div class="absolute inset-0 opacity-5 pointer-events-none">
+        <div class="absolute top-1/3 right-1/4 w-20 h-20 border-2 border-white/30 rounded-lg rotate-45 animate-float-slow"
+            style="animation-delay: 0.3s;"></div>
+        <div class="absolute bottom-1/3 left-1/4 w-16 h-16 border-2 border-white/30 rounded-full animate-float-medium"
+            style="animation-delay: 1.5s;"></div>
+        <div class="absolute top-2/3 right-1/3 w-12 h-12 bg-white/20 rounded-lg rotate-12 animate-float-fast"
+            style="animation-delay: 0.8s;"></div>
+        <div class="absolute top-1/5 right-1/5 w-24 h-24 border-2 border-white/20 rounded-full animate-float"
+            style="animation-delay: 2.5s;"></div>
+        <div class="absolute bottom-1/5 left-1/5 w-14 h-14 bg-white/15 rounded-lg rotate-45 animate-float-slow"
+            style="animation-delay: 1.8s;"></div>
+    </div>
+
+    
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="floating-particle" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
+        <div class="floating-particle" style="left: 20%; top: 80%; animation-delay: 1s;"></div>
+        <div class="floating-particle" style="left: 50%; top: 10%; animation-delay: 2s;"></div>
+        <div class="floating-particle" style="left: 70%; top: 60%; animation-delay: 1.5s;"></div>
+        <div class="floating-particle" style="left: 90%; top: 30%; animation-delay: 0.5s;"></div>
+        <div class="floating-particle" style="left: 30%; top: 50%; animation-delay: 2.5s;"></div>
+        <div class="floating-particle" style="left: 80%; top: 90%; animation-delay: 1.2s;"></div>
+        <div class="floating-particle" style="left: 5%; top: 70%; animation-delay: 0.8s;"></div>
+    </div>
+
+    
+    <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full flex items-center justify-center py-12 md:py-16">
+    <div class="text-center w-full max-w-5xl mx-auto px-4">
+            
+                            <div class="mb-4 md:mb-6 animate-slide-up">
+                    <div class="inline-block relative animate-float-gentle">
+                        <div class="absolute inset-0 bg-white/20 rounded-full blur-xl animate-pulse"></div>
+                        <img src="/media/profile.jpg" alt="Lisoing Sem - Full Stack Developer"
+                            class="relative w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full object-cover border-4 border-white/30 shadow-2xl ring-4 ring-white/20 hover:scale-105 transition-transform duration-300">
+                    </div>
+                </div>
+            
+            
+            <p class="text-base md:text-lg lg:text-xl mb-2 md:mb-3 text-white/90 animate-slide-up font-medium tracking-wide"
+                data-translate="hero.greeting" style="animation-delay: 0.1s">
+                Hi, I&#039;m
+            </p>
+
+            
+            <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-extrabold mb-3 md:mb-4 text-white drop-shadow-2xl animate-slide-up leading-[1.1] tracking-tight"
+                style="animation-delay: 0.2s">
+                <span class="block bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-indigo-100">
+                    Lisoing Sem
+                </span>
+            </h1>
+
+            
+            <div class="mb-5 md:mb-7 animate-slide-up" style="animation-delay: 0.3s">
+                <h2 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-indigo-100 drop-shadow-lg leading-snug inline-block px-5 py-2.5 md:px-6 md:py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 animate-float-gentle"
+                    data-translate="hero.title">
+                    Full Stack Developer
+                </h2>
+            </div>
+
+            
+            <p class="text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-8 md:mb-10 max-w-4xl mx-auto text-white drop-shadow-xl leading-relaxed font-normal animate-slide-up px-4"
+                style="animation-delay: 0.4s" data-translate="hero.description">
+                Passionate about creating exceptional digital experiences through clean code, innovative design, and cutting-edge technologies.
+            </p>
+
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up"
+                style="animation-delay: 0.5s">
+                                <a href="#contact"
+                                         class="btn-primary inline-flex items-center gap-2 text-base md:text-lg px-8 py-4 md:px-10 md:py-4 font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 rounded-xl"
+                    data-translate="hero.download_cv">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                        </path>
+                    </svg>
+                    Download CV
+                </a>
+                <a href="#contact"
+                    class="inline-flex items-center gap-2 text-base md:text-lg px-8 py-4 md:px-10 md:py-4 font-semibold bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                    data-translate="nav.contact">
+                    Contact
+                </a>
+            </div>
+        </div>
+</div>
+
+    
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce opacity-70 hidden md:block z-10">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+    </div>
+</section>
+    <section  id="about"  class="bg-white dark:bg-gray-900 py-16 md:py-20 ">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+    <div class="text-center mb-10 md:mb-12 lg:mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4 leading-tight"
+             data-translate="about.title" >
+            About Me
+        </h2>
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
+            data-translate="about.subtitle" >
+            Crafting Digital Excellence Through Code
+        </p>
+    </div>
+
+        
+        <div class="grid md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
+            <div class="text-center p-6 md:p-8 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 card-hover shadow-sm">
+                <div class="stat-number mb-3 text-4xl md:text-5xl">1+</div>
+                <p class="text-sm md:text-base text-gray-600 dark:text-gray-300 font-medium" data-translate="about.experience">
+                    Years Experience
+                </p>
+            </div>
+            
+            <div class="text-center p-6 md:p-8 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 card-hover shadow-sm"
+                style="animation-delay: 0.1s">
+                <div class="stat-number mb-3 text-4xl md:text-5xl">5+</div>
+                <p class="text-sm md:text-base text-gray-600 dark:text-gray-300 font-medium" data-translate="about.projects">
+                    Projects Completed
+                </p>
+            </div>
+            
+            <div class="text-center p-6 md:p-8 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 card-hover shadow-sm"
+                style="animation-delay: 0.2s">
+                <div class="stat-number mb-3 text-4xl md:text-5xl">100%</div>
+                <p class="text-sm md:text-base text-gray-600 dark:text-gray-300 font-medium" data-translate="about.satisfaction">
+                    Client Satisfaction
+                </p>
+            </div>
+        </div>
+
+        
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 leading-tight" data-translate="about.heading">
+                Junior Full-Stack Developer
+            </h3>
+            
+            <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 mb-6 md:mb-8 leading-relaxed" data-translate="about.description">
+                I&#039;m a passionate junior developer with 1+ years of experience building modern web applications. I specialize in full-stack development using Laravel, Vue.js, and Tailwind CSS to create responsive and user-friendly applications.
+            </p>
+
+            <h4 class="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white mb-4 md:mb-6" data-translate="about.technologies">
+                Core Technologies
+            </h4>
+            
+            <div class="flex flex-wrap gap-3">
+                                
+                                    <span class="tech-badge px-4 py-2 text-sm md:text-base bg-gray-50 dark:bg-gray-800 text-indigo-700 dark:text-indigo-300 rounded-lg font-medium border border-gray-200 dark:border-gray-700">
+                        Laravel
+                    </span>
+                                    <span class="tech-badge px-4 py-2 text-sm md:text-base bg-gray-50 dark:bg-gray-800 text-indigo-700 dark:text-indigo-300 rounded-lg font-medium border border-gray-200 dark:border-gray-700">
+                        Vue.js
+                    </span>
+                                    <span class="tech-badge px-4 py-2 text-sm md:text-base bg-gray-50 dark:bg-gray-800 text-indigo-700 dark:text-indigo-300 rounded-lg font-medium border border-gray-200 dark:border-gray-700">
+                        Tailwind CSS
+                    </span>
+                                    <span class="tech-badge px-4 py-2 text-sm md:text-base bg-gray-50 dark:bg-gray-800 text-indigo-700 dark:text-indigo-300 rounded-lg font-medium border border-gray-200 dark:border-gray-700">
+                        PHP
+                    </span>
+                                    <span class="tech-badge px-4 py-2 text-sm md:text-base bg-gray-50 dark:bg-gray-800 text-indigo-700 dark:text-indigo-300 rounded-lg font-medium border border-gray-200 dark:border-gray-700">
+                        JavaScript
+                    </span>
+                                    <span class="tech-badge px-4 py-2 text-sm md:text-base bg-gray-50 dark:bg-gray-800 text-indigo-700 dark:text-indigo-300 rounded-lg font-medium border border-gray-200 dark:border-gray-700">
+                        MySQL
+                    </span>
+                                    <span class="tech-badge px-4 py-2 text-sm md:text-base bg-gray-50 dark:bg-gray-800 text-indigo-700 dark:text-indigo-300 rounded-lg font-medium border border-gray-200 dark:border-gray-700">
+                        Git
+                    </span>
+                                    <span class="tech-badge px-4 py-2 text-sm md:text-base bg-gray-50 dark:bg-gray-800 text-indigo-700 dark:text-indigo-300 rounded-lg font-medium border border-gray-200 dark:border-gray-700">
+                        API Development
+                    </span>
+                            </div>
+        </div>
+</div>
+</section>
+    <section  id="experience"  class="bg-gray-50 dark:bg-gray-800 py-16 md:py-20 ">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+    <div class="text-center mb-10 md:mb-12 lg:mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4 leading-tight"
+             data-translate="experience.title" >
+            Experience &amp; Education
+        </h2>
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
+            data-translate="experience.subtitle" >
+            My professional journey and academic background
+        </p>
+    </div>
+
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+            
+            <div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-6 md:mb-8" data-translate="experience.work">
+                    Work Experience
+                </h3>
+
+                
+                                    <div
+    class="relative pl-8 pb-8 md:pb-10 border-l-2 border-gray-200 dark:border-gray-700 last:border-l-0 last:pb-0 hover:border-indigo-400 dark:hover:border-indigo-500 transition-colors duration-300">
+    <div class="timeline-dot"></div>
+
+    <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
+        <span
+            class="inline-flex items-center gap-2 text-xs md:text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide px-2 py-1 bg-indigo-50 dark:bg-indigo-900/20 rounded-md">
+                            <span class="w-1.5 h-1.5 bg-indigo-600 dark:bg-indigo-400 rounded-full"></span>
+                Current
+                    </span>
+        <span class="text-xs md:text-sm text-gray-600 dark:text-gray-400 font-medium">
+            Jun 2025 - Present
+        </span>
+    </div>
+
+    <h3
+        class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-2 leading-tight hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">
+        Backend Developer
+    </h3>
+
+    <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 font-semibold mb-2 md:mb-3">
+        Skylink Technologies
+    </p>
+
+    
+    <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+        Leading backend initiatives across cloud and automation projects. Building secure APIs, modernizing data architecture, and collaborating with cross-functional teams to deliver scalable business solutions for enterprise clients.
+    </p>
+
+            <div class="flex flex-wrap gap-2">
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Node.js
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    API Architecture
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Database Design
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Cloud Solutions
+                </span>
+                    </div>
+    </div>
+                                    <div
+    class="relative pl-8 pb-8 md:pb-10 border-l-2 border-gray-200 dark:border-gray-700 last:border-l-0 last:pb-0 hover:border-indigo-400 dark:hover:border-indigo-500 transition-colors duration-300">
+    <div class="timeline-dot"></div>
+
+    <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
+        <span
+            class="inline-flex items-center gap-2 text-xs md:text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide px-2 py-1 bg-indigo-50 dark:bg-indigo-900/20 rounded-md">
+                            Completed
+                    </span>
+        <span class="text-xs md:text-sm text-gray-600 dark:text-gray-400 font-medium">
+            Jun 2024 - Dec, 2024
+        </span>
+    </div>
+
+    <h3
+        class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-2 leading-tight hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">
+        Full-Stack Developer
+    </h3>
+
+    <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 font-semibold mb-2 md:mb-3">
+        Durable Techs
+    </p>
+
+    
+    <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+        Improved features on an education platform using Laravel Modules and Vue3 for development. Working closely with clients to meet specific requirements and delivering high-quality solutions.
+    </p>
+
+            <div class="flex flex-wrap gap-2">
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Laravel Modules
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Vue3
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Education Platform
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Client Collaboration
+                </span>
+                    </div>
+    </div>
+                                    <div
+    class="relative pl-8 pb-8 md:pb-10 border-l-2 border-gray-200 dark:border-gray-700 last:border-l-0 last:pb-0 hover:border-indigo-400 dark:hover:border-indigo-500 transition-colors duration-300">
+    <div class="timeline-dot"></div>
+
+    <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
+        <span
+            class="inline-flex items-center gap-2 text-xs md:text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide px-2 py-1 bg-indigo-50 dark:bg-indigo-900/20 rounded-md">
+                            <span class="w-1.5 h-1.5 bg-indigo-600 dark:bg-indigo-400 rounded-full"></span>
+                Current
+                    </span>
+        <span class="text-xs md:text-sm text-gray-600 dark:text-gray-400 font-medium">
+            2022 - Present
+        </span>
+    </div>
+
+    <h3
+        class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-2 leading-tight hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">
+        Freelance Full-Stack Developer
+    </h3>
+
+    <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 font-semibold mb-2 md:mb-3">
+        Remote
+    </p>
+
+    
+    <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+        Built responsive web applications with Laravel &amp; Vue.js. Created APIs and improved app performance. Delivered custom solutions directly to clients while applying best practices to enhance code quality, security, and performance.
+    </p>
+
+            <div class="flex flex-wrap gap-2">
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Laravel
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Vue.js
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    API Development
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Performance Optimization
+                </span>
+                    </div>
+    </div>
+                                    <div
+    class="relative pl-8 pb-8 md:pb-10 border-l-2 border-gray-200 dark:border-gray-700 last:border-l-0 last:pb-0 hover:border-indigo-400 dark:hover:border-indigo-500 transition-colors duration-300">
+    <div class="timeline-dot"></div>
+
+    <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
+        <span
+            class="inline-flex items-center gap-2 text-xs md:text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide px-2 py-1 bg-indigo-50 dark:bg-indigo-900/20 rounded-md">
+                            Completed
+                    </span>
+        <span class="text-xs md:text-sm text-gray-600 dark:text-gray-400 font-medium">
+            Oct 2023 - Feb 2024
+        </span>
+    </div>
+
+    <h3
+        class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-2 leading-tight hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">
+        Front-End Developer
+    </h3>
+
+    <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 font-semibold mb-2 md:mb-3">
+        Phsar Tech
+    </p>
+
+    
+    <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+        Built and cloned responsive websites using Laravel &amp; Tailwind CSS. Worked with QA and senior developers to test and improve features. Developed custom solutions for an Advertising Agency based on client needs.
+    </p>
+
+            <div class="flex flex-wrap gap-2">
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Laravel
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Tailwind CSS
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    QA Collaboration
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Custom Solutions
+                </span>
+                    </div>
+    </div>
+                            </div>
+
+            
+            <div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-6 md:mb-8" data-translate="experience.education">
+                    Education
+                </h3>
+
+                
+                                    <div
+    class="relative pl-8 pb-8 md:pb-10 border-l-2 border-gray-200 dark:border-gray-700 last:border-l-0 last:pb-0 hover:border-indigo-400 dark:hover:border-indigo-500 transition-colors duration-300">
+    <div class="timeline-dot"></div>
+
+    <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
+        <span
+            class="inline-flex items-center gap-2 text-xs md:text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide px-2 py-1 bg-indigo-50 dark:bg-indigo-900/20 rounded-md">
+                            Completed
+                    </span>
+        <span class="text-xs md:text-sm text-gray-600 dark:text-gray-400 font-medium">
+            2022 - 2025
+        </span>
+    </div>
+
+    <h3
+        class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-2 leading-tight hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">
+        Bachelor of Computer Science
+    </h3>
+
+    <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 font-semibold mb-2 md:mb-3">
+        Royal University of Phnom Penh
+    </p>
+
+    
+    <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+        Comprehensive study in computer science fundamentals, software engineering, and modern technologies. Gained solid foundation in programming, database systems, and software development methodologies.
+    </p>
+
+            <div class="flex flex-wrap gap-2">
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Computer Science
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Software Engineering
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Database Systems
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Programming
+                </span>
+                    </div>
+    </div>
+                                    <div
+    class="relative pl-8 pb-8 md:pb-10 border-l-2 border-gray-200 dark:border-gray-700 last:border-l-0 last:pb-0 hover:border-indigo-400 dark:hover:border-indigo-500 transition-colors duration-300">
+    <div class="timeline-dot"></div>
+
+    <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
+        <span
+            class="inline-flex items-center gap-2 text-xs md:text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide px-2 py-1 bg-indigo-50 dark:bg-indigo-900/20 rounded-md">
+                            Completed
+                    </span>
+        <span class="text-xs md:text-sm text-gray-600 dark:text-gray-400 font-medium">
+            2022 - 2023
+        </span>
+    </div>
+
+    <h3
+        class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-2 leading-tight hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">
+        Web Developer Course
+    </h3>
+
+    <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 font-semibold mb-2 md:mb-3">
+        Sunrise Institute of Technology
+    </p>
+
+    
+    <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+        Intensive web development program covering modern frontend and backend technologies. Gained practical experience in building responsive web applications and working with various frameworks.
+    </p>
+
+            <div class="flex flex-wrap gap-2">
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    HTML/CSS
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    JavaScript
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    PHP
+                </span>
+                            <span
+                    class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:shadow-sm">
+                    Web Frameworks
+                </span>
+                    </div>
+    </div>
+                            </div>
+        </div>
+</div>
+</section>
+    <section  id="portfolio"  class="bg-white dark:bg-gray-900 py-16 md:py-20 ">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+    <div class="text-center mb-10 md:mb-12 lg:mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4 leading-tight"
+             data-translate="portfolio.title" >
+            Featured Projects
+        </h2>
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
+            data-translate="portfolio.subtitle" >
+            Showcasing my latest work and technical achievements
+        </p>
+    </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+                            <div
+    class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-100 dark:border-gray-700 overflow-hidden group h-full flex flex-col">
+    
+    <div class="p-6 flex-grow flex flex-col">
+        <div class="flex items-center justify-between mb-3">
+            <span class="text-xs md:text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">
+                Network Management
+            </span>
+                            <span
+                    class="inline-flex items-center gap-1.5 text-xs md:text-sm font-semibold text-green-600 dark:text-green-400">
+                    <span class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full animate-pulse"></span>
+                    Live
+                </span>
+                    </div>
+
+        <h3
+            class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 leading-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-200">
+            NetBlock Platform
+        </h3>
+
+        <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-4 md:mb-6 flex-grow leading-relaxed">
+            Delivered a complete infrastructure for a network intelligence platform, combining a marketing site with secure APIs to manage customer subscriptions and analytics dashboards.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mb-4 md:mb-6">
+                                                <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        PHP
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Node.js
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Express
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        API Design
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Database Analysis
+                    </span>
+                                    </div>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer"
+                class="inline-block text-center px-4 py-2 md:px-6 md:py-3 text-sm md:text-base bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition-all duration-200 shadow-sm hover:shadow-md">
+                View Project
+            </a>
+            </div>
+</div>
+                            <div
+    class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-100 dark:border-gray-700 overflow-hidden group h-full flex flex-col">
+    
+    <div class="p-6 flex-grow flex flex-col">
+        <div class="flex items-center justify-between mb-3">
+            <span class="text-xs md:text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">
+                Education Platform
+            </span>
+                            <span
+                    class="inline-flex items-center gap-1.5 text-xs md:text-sm font-semibold text-green-600 dark:text-green-400">
+                    <span class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full animate-pulse"></span>
+                    Live
+                </span>
+                    </div>
+
+        <h3
+            class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 leading-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-200">
+            EDU Partner
+        </h3>
+
+        <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-4 md:mb-6 flex-grow leading-relaxed">
+            Led full-stack development to modernize the platform UX, introduce new collaboration features, and tailor learning workflows that match partner schools&#039; requirements.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mb-4 md:mb-6">
+                                                <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Laravel
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Full Stack
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        UI/UX Improvements
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Feature Development
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Customization
+                    </span>
+                                    </div>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer"
+                class="inline-block text-center px-4 py-2 md:px-6 md:py-3 text-sm md:text-base bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition-all duration-200 shadow-sm hover:shadow-md">
+                View Project
+            </a>
+            </div>
+</div>
+                            <div
+    class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-100 dark:border-gray-700 overflow-hidden group h-full flex flex-col">
+    
+    <div class="p-6 flex-grow flex flex-col">
+        <div class="flex items-center justify-between mb-3">
+            <span class="text-xs md:text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">
+                Tourism Platform
+            </span>
+                            <span
+                    class="inline-flex items-center gap-1.5 text-xs md:text-sm font-semibold text-green-600 dark:text-green-400">
+                    <span class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full animate-pulse"></span>
+                    Live
+                </span>
+                    </div>
+
+        <h3
+            class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 leading-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-200">
+            Cambodia Tourism Association
+        </h3>
+
+        <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-4 md:mb-6 flex-grow leading-relaxed">
+            Tourism Website – Built a platform with maps, event listings, and secure login to promote tourism in Cambodia.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mb-4 md:mb-6">
+                                                <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Laravel
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Tailwind CSS
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        API Integration
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Web Design
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Authentication
+                    </span>
+                                    </div>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer"
+                class="inline-block text-center px-4 py-2 md:px-6 md:py-3 text-sm md:text-base bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition-all duration-200 shadow-sm hover:shadow-md">
+                View Project
+            </a>
+            </div>
+</div>
+                            <div
+    class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-100 dark:border-gray-700 overflow-hidden group h-full flex flex-col">
+    
+    <div class="p-6 flex-grow flex flex-col">
+        <div class="flex items-center justify-between mb-3">
+            <span class="text-xs md:text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">
+                Education System
+            </span>
+                            <span
+                    class="inline-flex items-center gap-1.5 text-xs md:text-sm font-semibold text-green-600 dark:text-green-400">
+                    <span class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full animate-pulse"></span>
+                    Live
+                </span>
+                    </div>
+
+        <h3
+            class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 leading-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-200">
+            HEMIS Management System
+        </h3>
+
+        <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-4 md:mb-6 flex-grow leading-relaxed">
+            Education System – Created a system to manage students, academic records, and dashboards for universities.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mb-4 md:mb-6">
+                                                <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Laravel
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Laravel Modules
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Vue.js
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Database Design
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Dashboard
+                    </span>
+                                    </div>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer"
+                class="inline-block text-center px-4 py-2 md:px-6 md:py-3 text-sm md:text-base bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition-all duration-200 shadow-sm hover:shadow-md">
+                View Project
+            </a>
+            </div>
+</div>
+                            <div
+    class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-100 dark:border-gray-700 overflow-hidden group h-full flex flex-col">
+    
+    <div class="p-6 flex-grow flex flex-col">
+        <div class="flex items-center justify-between mb-3">
+            <span class="text-xs md:text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">
+                E-commerce Platform
+            </span>
+                            <span
+                    class="inline-flex items-center gap-1.5 text-xs md:text-sm font-semibold text-green-600 dark:text-green-400">
+                    <span class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full animate-pulse"></span>
+                    Live
+                </span>
+                    </div>
+
+        <h3
+            class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 leading-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-200">
+            Sunsimexco Ltd
+        </h3>
+
+        <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-4 md:mb-6 flex-grow leading-relaxed">
+            E-commerce Website – Developed a modern, responsive site with online product listings and SEO to boost visibility and sales.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mb-4 md:mb-6">
+                                                <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Laravel
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Laravel Modules
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Vue.js
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Full Stack
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        SEO
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Responsive
+                    </span>
+                                    </div>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer"
+                class="inline-block text-center px-4 py-2 md:px-6 md:py-3 text-sm md:text-base bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition-all duration-200 shadow-sm hover:shadow-md">
+                View Project
+            </a>
+            </div>
+</div>
+                            <div
+    class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-100 dark:border-gray-700 overflow-hidden group h-full flex flex-col">
+    
+    <div class="p-6 flex-grow flex flex-col">
+        <div class="flex items-center justify-between mb-3">
+            <span class="text-xs md:text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">
+                E-commerce Platform
+            </span>
+                            <span
+                    class="inline-flex items-center gap-1.5 text-xs md:text-sm font-semibold text-green-600 dark:text-green-400">
+                    <span class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full animate-pulse"></span>
+                    Live
+                </span>
+                    </div>
+
+        <h3
+            class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 leading-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-200">
+            3Winbiz Cambodia Co., Ltd
+        </h3>
+
+        <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-4 md:mb-6 flex-grow leading-relaxed">
+            E-commerce Platform – Built a system with vendor and agent roles to manage product listings, sales, and business operations.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mb-4 md:mb-6">
+                                                <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Laravel
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Laravel Modules
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Vue.js
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Full Stack
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        SEO
+                    </span>
+                                    <span
+                        class="px-3 py-1 text-xs md:text-sm bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-md font-medium border border-gray-200 dark:border-gray-600 transition-colors duration-200 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        Responsive
+                    </span>
+                                    </div>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer"
+                class="inline-block text-center px-4 py-2 md:px-6 md:py-3 text-sm md:text-base bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition-all duration-200 shadow-sm hover:shadow-md">
+                View Project
+            </a>
+            </div>
+</div>
+                    </div>
+</div>
+</section>
+    <section  id="contact"  class="bg-gray-50 dark:bg-gray-800 py-16 md:py-20 ">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 ">
+    <div class="text-center mb-10 md:mb-12 lg:mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4 leading-tight"
+             data-translate="contact.title" >
+            Get In Touch
+        </h2>
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
+            data-translate="contact.subtitle" >
+            Let&#039;s turn your ideas into exceptional digital experiences
+        </p>
+    </div>
+
+        <div class="max-w-3xl mx-auto text-center">
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 leading-tight" data-translate="contact.heading">
+                Ready to Bring Your Vision to Life?
+            </h3>
+            
+            <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 mb-6 md:mb-8 leading-relaxed" data-translate="contact.description">
+                I&#039;m a passionate full-stack developer specializing in modern web applications using Laravel, Vue.js, and cutting-edge technologies. Whether you need a responsive website, e-commerce platform, or custom web solution, I&#039;m here to transform your ideas into exceptional digital experiences.
+            </p>
+
+            <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 mb-6 md:mb-8 font-medium" data-translate="contact.cta">
+                Let&#039;s discuss your project and make it happen:
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-8 md:mb-10">
+                <a href="mailto:lisoingsem@gmail.com"
+                   class="btn-primary text-base md:text-lg px-6 py-3 md:px-8 md:py-4"
+                   data-translate="contact.email">
+                    Email Me
+                </a>
+                <a href="tel:+855978263599"
+                   class="px-6 py-3 md:px-8 md:py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold transition-all duration-200 text-base md:text-lg shadow-sm hover:shadow-md"
+                   data-translate="contact.call">
+                    Call Me
+                </a>
+                                <a href="https://t.me/Leng_SEM"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="px-6 py-3 md:px-8 md:py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200 text-base md:text-lg shadow-sm hover:shadow-md"
+                   data-translate="contact.telegram">
+                    Telegram
+                </a>
+                            </div>
+
+                        <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-4" data-translate="contact.social">
+                Or find me on social media:
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                                <a href="https://github.com/lisoingsem" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
+                   aria-label="GitHub">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                                                <a href="https://www.linkedin.com/in/lisoing-sem" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
+                   aria-label="LinkedIn">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                                                                <a href="https://t.me/Leng_SEM" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
+                   aria-label="Telegram">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16l-1.843 8.687c-.135.608-.485.757-.984.471l-2.724-2.006-1.314 1.263c-.148.148-.273.273-.56.273l.199-2.827 5.045-4.556c.22-.196-.048-.304-.342-.107l-6.237 3.926-2.689-.84c-.588-.186-.604-.588.112-.88l10.497-4.045c.49-.179.918.111.758.69z"/>
+                    </svg>
+                </a>
+                            </div>
+                    </div>
+</div>
+</section>
+    </main>
+
+    <footer
+    class="bg-gray-800 dark:bg-gray-900 text-white py-8 md:py-12 mt-auto border-t border-gray-700 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8 md:gap-12 mb-6 md:mb-8">
+            <!-- Brand Section -->
+            <div>
+                <div class="flex items-center gap-3 mb-3 md:mb-4">
+                                            <img src="/media/profile.jpg" alt="Lisoing Sem - Full Stack Developer"
+                            class="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-2 border-indigo-400 dark:border-indigo-500 shadow-md">
+                                        <div>
+                        <h3 class="text-xl md:text-2xl font-bold">
+                            Lisoing Sem
+                        </h3>
+                        <p class="text-sm md:text-base text-gray-400 leading-relaxed mt-1">
+                            Full Stack Developer
+                        </p>
+                    </div>
+                </div>
+                                    <p class="text-xs md:text-sm text-gray-500 mt-2">
+                        Phnom Penh, Cambodia
+                    </p>
+                            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg md:text-xl font-semibold mb-4 md:mb-5" data-translate="nav.quick_links">Quick Links
+                </h4>
+                <ul class="space-y-2 md:space-y-3">
+                    <li>
+                        <a href="/"
+                            class="text-sm md:text-base text-gray-400 hover:text-white transition-colors duration-200"
+                            data-translate="nav.home">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/about"
+                            class="text-sm md:text-base text-gray-400 hover:text-white transition-colors duration-200"
+                            data-translate="nav.about">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/portfolio"
+                            class="text-sm md:text-base text-gray-400 hover:text-white transition-colors duration-200"
+                            data-translate="nav.portfolio">
+                            Portfolio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/contact"
+                            class="text-sm md:text-base text-gray-400 hover:text-white transition-colors duration-200"
+                            data-translate="nav.contact">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-lg md:text-xl font-semibold mb-4 md:mb-5" data-translate="contact.title">Get In Touch
+                </h4>
+                <ul class="space-y-2 md:space-y-3 text-gray-400">
+                    <li>
+                        <a href="mailto:lisoingsem@gmail.com"
+                            class="text-sm md:text-base hover:text-white transition-colors duration-200">
+                            lisoingsem@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+855978263599"
+                            class="text-sm md:text-base hover:text-white transition-colors duration-200">
+                            +855 978 263 599
+                        </a>
+                    </li>
+                </ul>
+
+                                    <div class="flex gap-4 mt-4">
+                                                    <a href="https://github.com/lisoingsem" target="_blank" rel="noopener noreferrer"
+                                class="text-gray-400 hover:text-white transition-colors duration-200"
+                                aria-label="GitHub">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                                                                            <a href="https://www.linkedin.com/in/lisoing-sem" target="_blank" rel="noopener noreferrer"
+                                class="text-gray-400 hover:text-white transition-colors duration-200"
+                                aria-label="LinkedIn">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </a>
+                                                                                                    <a href="https://t.me/Leng_SEM" target="_blank" rel="noopener noreferrer"
+                                class="text-gray-400 hover:text-white transition-colors duration-200"
+                                aria-label="Telegram">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16l-1.843 8.687c-.135.608-.485.757-.984.471l-2.724-2.006-1.314 1.263c-.148.148-.273.273-.56.273l.199-2.827 5.045-4.556c.22-.196-.048-.304-.342-.107l-6.237 3.926-2.689-.84c-.588-.186-.604-.588.112-.88l10.497-4.045c.49-.179.918.111.758.69z" />
+                                </svg>
+                            </a>
+                                            </div>
+                            </div>
+        </div>
+
+        <div class="border-t border-gray-700 dark:border-gray-800 pt-6 md:pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm md:text-base text-gray-400 text-center md:text-left leading-relaxed">
+                    © 2025 Lisoing Sem. All rights reserved.
+                </p>
+                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+                    class="flex items-center gap-2 text-sm md:text-base text-gray-400 hover:text-white transition-colors duration-200"
+                    aria-label="Back to top">
+                    <span data-translate="common.back_to_top">↑</span>
+                    <span class="hidden sm:inline"
+                        data-translate="footer.back_to_top">Back to top</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+    
+    <script>
+        window.translations = {
+            en: {"nav.home":"Home","nav.about":"About","nav.portfolio":"Portfolio","nav.contact":"Contact","nav.quick_links":"Quick Links","hero.greeting":"Hi, I\u0027m","hero.name":"Lisoing Sem","hero.title":"Full Stack Developer","hero.description":"Passionate about creating exceptional digital experiences through clean code, innovative design, and cutting-edge technologies.","hero.download_cv":"Download CV","about.title":"About Me","about.subtitle":"Crafting Digital Excellence Through Code","about.name":"Lisoing Sem - Full Stack Developer","about.quality":"Quality Focused","about.delivery":"Fast Delivery","about.excellence":"Excellence Driven","about.heading":"Junior Full-Stack Developer","about.description":"I\u0027m a passionate junior developer with 1+ years of experience building modern web applications. I specialize in full-stack development using Laravel, Vue.js, and Tailwind CSS to create responsive and user-friendly applications.","about.technologies":"Core Technologies","about.experience":"Years Experience","about.projects":"Projects Completed","about.satisfaction":"Client Satisfaction","experience.title":"Experience \u0026 Education","experience.subtitle":"My professional journey and academic background","experience.work":"Work Experience","experience.education":"Education","experience.current":"Current","experience.completed":"Completed","experience.freelance":"Freelance Full-Stack Developer","experience.remote":"Remote","experience.description":"Built responsive web applications with Laravel \u0026 Vue.js. Created APIs and improved app performance. Delivered custom solutions directly to clients while applying best practices to enhance code quality, security, and performance.","portfolio.title":"Featured Projects","portfolio.subtitle":"Showcasing my latest work and technical achievements","portfolio.view_project":"View Project","portfolio.live":"Live","contact.title":"Get In Touch","contact.subtitle":"Let\u0027s turn your ideas into exceptional digital experiences","contact.heading":"Ready to Bring Your Vision to Life?","contact.description":"I\u0027m a passionate full-stack developer specializing in modern web applications using Laravel, Vue.js, and cutting-edge technologies. Whether you need a responsive website, e-commerce platform, or custom web solution, I\u0027m here to transform your ideas into exceptional digital experiences.","contact.cta":"Let\u0027s discuss your project and make it happen:","contact.email":"Email Me","contact.call":"Call Me","contact.telegram":"Telegram","contact.social":"Or find me on social media:","footer.copyright":"\u00a9 2025 Lisoing Sem. All rights reserved.","footer.back_to_top":"Back to top","common.back_to_top":"\u2191"},
+            km: {"nav.home":"\u1791\u17c6\u1796\u17d0\u179a\u178a\u17be\u1798","nav.about":"\u17a2\u17c6\u1796\u17b8\u1781\u17d2\u1789\u17bb\u17c6","nav.portfolio":"\u1782\u1798\u17d2\u179a\u17c4\u1784","nav.contact":"\u1791\u17c6\u1793\u17b6\u1780\u17cb\u1791\u17c6\u1793\u1784","nav.quick_links":"\u178f\u17c6\u178e\u1797\u17d2\u1787\u17b6\u1794\u17cb","hero.greeting":"\u179f\u17bd\u179f\u17d2\u178a\u17b8, \u1781\u17d2\u1789\u17bb\u17c6\u1788\u17d2\u1798\u17c4\u17c7","hero.name":"\u179b\u17b8\u179f\u17b8\u17a2\u17ca\u17b8\u1784 \u179f\u17c2\u1798","hero.title":"\u17a2\u17d2\u1793\u1780\u17a2\u1797\u17b7\u179c\u178c\u17d2\u178d Full Stack","hero.description":"\u1798\u17b6\u1793\u1785\u17c6\u178e\u17b6\u1794\u17cb\u17a2\u17b6\u179a\u1798\u17d2\u1798\u178e\u17cd\u1799\u17c9\u17b6\u1784\u1781\u17d2\u179b\u17b6\u17c6\u1784\u1780\u17d2\u1793\u17bb\u1784\u1780\u17b6\u179a\u1794\u1784\u17d2\u1780\u17be\u178f\u1794\u1791\u1796\u17b7\u179f\u17c4\u1792\u1793\u17cd\u178c\u17b8\u1787\u17b8\u1790\u179b\u179b\u17be\u179f\u1791\u17c5\u178f\u17b6\u1798\u1780\u17bc\u178a\u179f\u17d2\u17a2\u17b6\u178f \u1780\u17b6\u179a\u179a\u1785\u1793\u17b6\u1785\u17d2\u1793\u17c3\u1794\u17d2\u179a\u178c\u17b7\u178f \u1793\u17b7\u1784\u1794\u1785\u17d2\u1785\u17c1\u1780\u179c\u17b7\u1791\u17d2\u1799\u17b6\u1791\u17c6\u1793\u17be\u1794\u17d4","hero.download_cv":"\u1791\u17b6\u1789\u1799\u1780 CV","about.title":"\u17a2\u17c6\u1796\u17b8\u1781\u17d2\u1789\u17bb\u17c6","about.subtitle":"\u1780\u17b6\u179a\u1794\u1784\u17d2\u1780\u17be\u178f\u17a7\u178f\u17d2\u178a\u1798\u1797\u17b6\u1796\u178c\u17b8\u1787\u17b8\u1790\u179b\u178f\u17b6\u1798\u179a\u1799\u17c8\u1780\u17bc\u178a","about.name":"\u179b\u17b8\u179f\u17b8\u17a2\u17ca\u17b8\u1784 \u179f\u17c2\u1798 - \u17a2\u17d2\u1793\u1780\u17a2\u1797\u17b7\u179c\u178c\u17d2\u178d Full Stack","about.quality":"\u1795\u17d2\u178f\u17c4\u178f\u179b\u17be\u1782\u17bb\u178e\u1797\u17b6\u1796","about.delivery":"\u1780\u17b6\u179a\u178a\u17b9\u1780\u1787\u1789\u17d2\u1787\u17bc\u1793\u179a\u17a0\u17d0\u179f","about.excellence":"\u178a\u17b9\u1780\u1793\u17b6\u17c6\u178a\u17c4\u1799\u17a7\u178f\u17d2\u178a\u1798\u1797\u17b6\u1796","about.heading":"\u17a2\u17d2\u1793\u1780\u17a2\u1797\u17b7\u179c\u178c\u17d2\u178d Full-Stack Junior","about.description":"\u1781\u17d2\u1789\u17bb\u17c6\u1787\u17b6\u17a2\u17d2\u1793\u1780\u17a2\u1797\u17b7\u179c\u178c\u17d2\u178d junior \u178a\u17c2\u179b\u1798\u17b6\u1793\u1785\u17c6\u178e\u17b6\u1794\u17cb\u17a2\u17b6\u179a\u1798\u17d2\u1798\u178e\u17cd\u1799\u17c9\u17b6\u1784\u1781\u17d2\u179b\u17b6\u17c6\u1784\u1787\u17b6\u1798\u17bd\u1799\u1793\u17b9\u1784\u1794\u1791\u1796\u17b7\u179f\u17c4\u1792\u1793\u17cd\u1787\u17b6\u1784 \u17e1 \u1786\u17d2\u1793\u17b6\u17c6\u1780\u17d2\u1793\u17bb\u1784\u1780\u17b6\u179a\u1794\u1784\u17d2\u1780\u17be\u178f\u1780\u1798\u17d2\u1798\u179c\u17b7\u1792\u17b8\u179c\u17c1\u1794\u1791\u17c6\u1793\u17be\u1794\u17d4 \u1781\u17d2\u1789\u17bb\u17c6\u1787\u17c6\u1793\u17b6\u1789\u1780\u17d2\u1793\u17bb\u1784\u1780\u17b6\u179a\u17a2\u1797\u17b7\u179c\u178c\u17d2\u178d full-stack \u178a\u17c4\u1799\u1794\u17d2\u179a\u17be Laravel, Vue.js, \u1793\u17b7\u1784 Tailwind CSS \u178a\u17be\u1798\u17d2\u1794\u17b8\u1794\u1784\u17d2\u1780\u17be\u178f\u1780\u1798\u17d2\u1798\u179c\u17b7\u1792\u17b8\u178a\u17c2\u179b\u1798\u17b6\u1793\u179b\u1780\u17d2\u1781\u178e\u17c8 responsive \u1793\u17b7\u1784\u1784\u17b6\u1799\u1794\u17d2\u179a\u17be\u17d4","about.technologies":"\u1794\u1785\u17d2\u1785\u17c1\u1780\u179c\u17b7\u1791\u17d2\u1799\u17b6\u179f\u17d2\u1793\u17bc\u179b","about.experience":"\u1786\u17d2\u1793\u17b6\u17c6\u1793\u17c3\u1794\u1791\u1796\u17b7\u179f\u17c4\u1792\u1793\u17cd","about.projects":"\u1782\u1798\u17d2\u179a\u17c4\u1784\u1794\u17b6\u1793\u1794\u1789\u17d2\u1785\u1794\u17cb","about.satisfaction":"\u1780\u17b6\u179a\u1796\u17c1\u1789\u1785\u17b7\u178f\u17d2\u178f\u179a\u1794\u179f\u17cb\u17a2\u178f\u17b7\u1790\u17b7\u1787\u1793","experience.title":"\u1794\u1791\u1796\u17b7\u179f\u17c4\u1792\u1793\u17cd \u1793\u17b7\u1784\u1780\u17b6\u179a\u17a2\u1794\u17cb\u179a\u17c6","experience.subtitle":"\u1780\u17b6\u179a\u1792\u17d2\u179c\u17be\u178a\u17c6\u178e\u17be\u179a\u1787\u17b6\u179c\u17b7\u1787\u17d2\u1787\u17b6\u1787\u17b8\u179c\u17c8 \u1793\u17b7\u1784\u1795\u17d2\u1791\u17c3\u1781\u17b6\u1784\u1780\u17d2\u179a\u17c4\u1799\u179f\u17b7\u1780\u17d2\u179f\u17b6\u179f\u17b6\u179f\u17d2\u178f\u17d2\u179a","experience.work":"\u1794\u1791\u1796\u17b7\u179f\u17c4\u1792\u1793\u17cd\u1780\u17b6\u179a\u1784\u17b6\u179a","experience.education":"\u1780\u17b6\u179a\u17a2\u1794\u17cb\u179a\u17c6","experience.current":"\u1794\u1785\u17d2\u1785\u17bb\u1794\u17d2\u1794\u1793\u17d2\u1793","experience.completed":"\u1794\u17b6\u1793\u1794\u1789\u17d2\u1785\u1794\u17cb","experience.freelance":"\u17a2\u17d2\u1793\u1780\u17a2\u1797\u17b7\u179c\u178c\u17d2\u178d Full-Stack \u17af\u1780\u179a\u17b6\u1787\u17d2\u1799","experience.remote":"\u1796\u17b8\u1785\u1798\u17d2\u1784\u17b6\u1799","experience.description":"\u1794\u17b6\u1793\u1794\u1784\u17d2\u1780\u17be\u178f\u1780\u1798\u17d2\u1798\u179c\u17b7\u1792\u17b8\u179c\u17c1\u1794 responsive \u1787\u17b6\u1798\u17bd\u1799 Laravel \u0026 Vue.js\u17d4 \u1794\u17b6\u1793\u1794\u1784\u17d2\u1780\u17be\u178f APIs \u1793\u17b7\u1784\u1794\u1784\u17d2\u1780\u17be\u1793\u1794\u17d2\u179a\u179f\u17b7\u1791\u17d2\u1792\u1797\u17b6\u1796\u1780\u1798\u17d2\u1798\u179c\u17b7\u1792\u17b8\u17d4 \u1794\u17b6\u1793\u1795\u17d2\u178f\u179b\u17cb\u178a\u17c6\u178e\u17c4\u17c7\u179f\u17d2\u179a\u17b6\u1799\u1794\u17d2\u179b\u17c2\u1780\u17d7\u178a\u17c4\u1799\u1795\u17d2\u1791\u17b6\u179b\u17cb\u1791\u17c5\u1780\u17b6\u1793\u17cb\u17a2\u178f\u17b7\u1790\u17b7\u1787\u1793 \u1781\u178e\u17c8\u178a\u17c2\u179b\u17a2\u1793\u17bb\u179c\u178f\u17d2\u178f\u17a2\u1793\u17bb\u179c\u178f\u17d2\u178f\u1787\u17b6\u1780\u17cb\u179f\u17d2\u178f\u17c2\u1784\u178a\u17be\u1798\u17d2\u1794\u17b8\u1794\u1784\u17d2\u1780\u17be\u1793\u1782\u17bb\u178e\u1797\u17b6\u1796\u1780\u17bc\u178a \u179f\u1793\u17d2\u178f\u17b7\u179f\u17bb\u1781 \u1793\u17b7\u1784\u1794\u17d2\u179a\u179f\u17b7\u1791\u17d2\u1792\u1797\u17b6\u1796\u17d4","portfolio.title":"\u1782\u1798\u17d2\u179a\u17c4\u1784\u1796\u17b7\u179f\u17c1\u179f","portfolio.subtitle":"\u1794\u1784\u17d2\u17a0\u17b6\u1789\u1780\u17b6\u179a\u1784\u17b6\u179a\u1785\u17bb\u1784\u1780\u17d2\u179a\u17c4\u1799 \u1793\u17b7\u1784\u1793\u17b7\u1791\u179f\u17d2\u179f\u1793\u17cd\u1794\u1785\u17d2\u1785\u17c1\u1780\u1791\u17c1\u179f\u179a\u1794\u179f\u17cb\u1781\u17d2\u1789\u17bb\u17c6","portfolio.view_project":"\u1798\u17be\u179b\u1782\u1798\u17d2\u179a\u17c4\u1784","portfolio.live":"\u1795\u17d2\u1791\u17b6\u179b\u17cb","contact.title":"\u1791\u17b6\u1780\u17cb\u1791\u1784","contact.subtitle":"\u1785\u17bc\u179a\u1799\u17be\u1784\u1794\u17d2\u179a\u17c2\u1780\u17d2\u179b\u17b6\u1799\u1782\u17c6\u1793\u17b7\u178f\u179a\u1794\u179f\u17cb\u17a2\u17d2\u1793\u1780\u1791\u17c5\u1787\u17b6\u1794\u1791\u1796\u17b7\u179f\u17c4\u1792\u1793\u17cd\u178c\u17b8\u1787\u17b8\u1790\u179b\u179b\u17be\u179f","contact.heading":"\u178f\u17d2\u179a\u17c0\u1798\u179a\u17bd\u1785\u1787\u17b6\u1798\u17bd\u1799\u1793\u17b9\u1784\u1780\u17b6\u179a\u1794\u1784\u17d2\u1780\u17be\u178f\u179c\u17b7\u179f\u17b6\u179b\u1797\u17b6\u1796\u179a\u1794\u179f\u17cb\u17a2\u17d2\u1793\u1780?","contact.description":"\u1781\u17d2\u1789\u17bb\u17c6\u1787\u17b6\u17a2\u17d2\u1793\u1780\u17a2\u1797\u17b7\u179c\u178c\u17d2\u178d full-stack \u178a\u17c2\u179b\u1798\u17b6\u1793\u1785\u17c6\u178e\u17b6\u1794\u17cb\u17a2\u17b6\u179a\u1798\u17d2\u1798\u178e\u17cd\u1799\u17c9\u17b6\u1784\u1781\u17d2\u179b\u17b6\u17c6\u1784 \u1787\u17c6\u1793\u17b6\u1789\u1780\u17d2\u1793\u17bb\u1784\u1780\u1798\u17d2\u1798\u179c\u17b7\u1792\u17b8\u179c\u17c1\u1794\u1791\u17c6\u1793\u17be\u1794\u178a\u17c4\u1799\u1794\u17d2\u179a\u17be Laravel, Vue.js, \u1793\u17b7\u1784\u1794\u1785\u17d2\u1785\u17c1\u1780\u179c\u17b7\u1791\u17d2\u1799\u17b6\u1791\u17c6\u1793\u17be\u1794\u17d4 \u1798\u17b7\u1793\u1790\u17b6\u17a2\u17d2\u1793\u1780\u178f\u17d2\u179a\u17bc\u179c\u1780\u17b6\u179a\u1782\u17c1\u17a0\u1791\u17c6\u1796\u17d0\u179a responsive, \u179c\u17c1\u1791\u17b7\u1780\u17b6 e-commerce, \u17ac\u178a\u17c6\u178e\u17c4\u17c7\u179f\u17d2\u179a\u17b6\u1799\u179c\u17c1\u1794\u1794\u17d2\u179b\u17c2\u1780\u17d7, \u1781\u17d2\u1789\u17bb\u17c6\u1793\u17c5\u1791\u17b8\u1793\u17c1\u17c7\u178a\u17be\u1798\u17d2\u1794\u17b8\u1794\u17d2\u179a\u17c2\u1780\u17d2\u179b\u17b6\u1799\u1782\u17c6\u1793\u17b7\u178f\u179a\u1794\u179f\u17cb\u17a2\u17d2\u1793\u1780\u1791\u17c5\u1787\u17b6\u1794\u1791\u1796\u17b7\u179f\u17c4\u1792\u1793\u17cd\u178c\u17b8\u1787\u17b8\u1790\u179b\u179b\u17be\u179f\u17d4","contact.cta":"\u1785\u17bc\u179a\u1799\u17be\u1784\u1796\u17b7\u1797\u17b6\u1780\u17d2\u179f\u17b6\u17a2\u17c6\u1796\u17b8\u1782\u1798\u17d2\u179a\u17c4\u1784\u179a\u1794\u179f\u17cb\u17a2\u17d2\u1793\u1780 \u1793\u17b7\u1784\u1792\u17d2\u179c\u17be\u179c\u17b6\u17b1\u17d2\u1799\u1780\u17be\u178f\u17a1\u17be\u1784:","contact.email":"\u1795\u17d2\u1789\u17be\u17a2\u17ca\u17b8\u1798\u17c2\u179b","contact.call":"\u1791\u17bc\u179a\u179f\u17d0\u1796\u17d2\u1791","contact.telegram":"Telegram","contact.social":"\u17ac\u179f\u17d2\u179c\u17c2\u1784\u179a\u1780\u1781\u17d2\u1789\u17bb\u17c6\u1793\u17c5\u179b\u17be\u1794\u178e\u17d2\u178f\u17b6\u1789\u179f\u1784\u17d2\u1782\u1798:","footer.copyright":"\u00a9 \u17e2\u17e0\u17e2\u17e5 \u179b\u17b8\u179f\u17b8\u17a2\u17ca\u17b8\u1784 \u179f\u17c2\u1798\u17d4 \u179a\u1780\u17d2\u179f\u17b6\u179f\u17b7\u1791\u17d2\u1792\u17b7\u1782\u17d2\u179a\u1794\u17cb\u1799\u17c9\u17b6\u1784\u17d4","footer.back_to_top":"\u178f\u17d2\u179a\u179b\u1794\u17cb\u1791\u17c5\u1780\u17c6\u1796\u17bc\u179b","common.back_to_top":"\u2191"}        };
+    </script>
+
+    <script type="module" defer src="media/app.js?v=c1f88089"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.3/dist/cdn.min.js" integrity="sha256-gOkV4d9/FmMNEkjOzVlyM2eNAWSUXisT+1RbMTTIgXI=" crossorigin="anonymous"></script>
+
+<script>
+    function toggleTheme() {
+        if (localStorage.getItem('color-theme') === 'dark' || !('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem('color-theme', 'light');
+            document.getElementById('meta-color-scheme').setAttribute('content', 'light');
+        } else {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem('color-theme', 'dark');
+            document.getElementById('meta-color-scheme').setAttribute('content', 'dark');
+        }
+    }
+</script>
+
+
+
+
+
+
+</body>
+
+</html>
