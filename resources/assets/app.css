@@ -86,6 +86,89 @@
     #progress-bar-fill {
         box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
     }
+    
+    /* Ensure hero profile image stays small */
+    .hero-gradient img[alt*="Lisoing"] {
+        max-width: 130px !important;
+        max-height: 130px !important;
+        width: 130px !important;
+        height: 130px !important;
+    }
+    
+    /* Consistent slide-up animation - refined */
+    @keyframes slide-up {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .animate-slide-up {
+        animation: slide-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        opacity: 0;
+    }
+    
+    /* Slow pulse animation for backgrounds */
+    @keyframes pulse-slow {
+        0%, 100% {
+            opacity: 0.1;
+        }
+        50% {
+            opacity: 0.15;
+        }
+    }
+    
+    .animate-pulse-slow {
+        animation: pulse-slow 4s ease-in-out infinite;
+    }
+    
+    /* Float animations - consistent timing */
+    @keyframes float-slow {
+        0%, 100% {
+            transform: translateY(0) translateX(0);
+        }
+        50% {
+            transform: translateY(-20px) translateX(10px);
+        }
+    }
+    
+    @keyframes float-medium {
+        0%, 100% {
+            transform: translateY(0) translateX(0);
+        }
+        50% {
+            transform: translateY(-15px) translateX(-10px);
+        }
+    }
+    
+    .animate-float-slow {
+        animation: float-slow 6s ease-in-out infinite;
+    }
+    
+    .animate-float-medium {
+        animation: float-medium 8s ease-in-out infinite;
+    }
+    
+    /* Ensure navigation profile image stays small */
+    nav img[alt*="Lisoing"],
+    nav img[alt*="Full Stack Developer"] {
+        max-width: 44px !important;
+        max-height: 44px !important;
+        width: 36px !important;
+        height: 36px !important;
+    }
+    
+    @media (min-width: 768px) {
+        nav img[alt*="Lisoing"],
+        nav img[alt*="Full Stack Developer"] {
+            width: 44px !important;
+            height: 44px !important;
+        }
+    }
 }
 
 @layer components {

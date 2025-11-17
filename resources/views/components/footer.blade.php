@@ -11,7 +11,13 @@
             <div>
                 <div class="flex items-center gap-3 mb-3 md:mb-4">
                     @if (isset($profile['image']) && $profile['image'] !== '')
-                        <img src="{{ $profile['image'] }}" alt="{{ $profile['image_alt'] ?? $profile['name'] }}"
+                        @php
+                            $imageFile = str_replace('/media/', '', $profile['image']);
+                            $imageUrl = \Hyde\Facades\Asset::exists($imageFile) 
+                                ? \Hyde\Facades\Asset::get('media/' . $imageFile) 
+                                : $profile['image'];
+                        @endphp
+                        <img src="{{ $imageUrl }}" alt="{{ $profile['image_alt'] ?? $profile['name'] }}"
                             class="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-2 border-indigo-400 dark:border-indigo-500 shadow-md">
                     @endif
                     <div>

@@ -2,8 +2,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ $page->title() }}</title>
 
+{{-- Favicons --}}
 @if (Asset::exists('favicon.ico'))
     <link rel="shortcut icon" href="{{ Asset::get('media/favicon.ico') }}" type="image/x-icon">
+@endif
+@if (Asset::exists('apple-touch-icon.png'))
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ Asset::get('media/apple-touch-icon.png') }}">
+@endif
+@if (Asset::exists('favicon-32x32.png'))
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ Asset::get('media/favicon-32x32.png') }}">
+@endif
+@if (Asset::exists('favicon-16x16.png'))
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ Asset::get('media/favicon-16x16.png') }}">
+@endif
+@if (Asset::exists('site.webmanifest'))
+    <link rel="manifest" href="{{ Asset::get('media/site.webmanifest') }}">
 @endif
 
 {{-- App Meta Tags --}}
